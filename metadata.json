@@ -1,0 +1,6 @@
+{
+  "name": "Aetherium Pokedex",
+  "description": "An Ethereal High-Tech Pokedex featuring celestial aesthetics, high-tech glassmorphism, dynamic animations, official artwork, and AI-powered Aetheric lore generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
