@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Pokemon, AethericLore } from "../types";
 import { TYPE_GLOWS, getTierForId } from "../data/curatedPokemon";
+import { analyzePokemon } from "../lib/aethericApi";
 import { X, Play, Loader2, Sparkles, Shield, Cpu, Activity, Ruler, Weight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -64,29 +65,19 @@ export default function DetailView({ pokemon, onClose, onAddToTeam, isInTeam = f
       });
   };
 
-  // Trigger Gemini analysis
+  // Trigger Gemini analysis (falls back to procedural lore on GitHub Pages)
   const channelAethericRevelation = async () => {
     setLoadingLore(true);
     setError(null);
     try {
-      const response = await fetch("/api/gemini/analyze", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: pokemon.name,
-          id: pokemon.id,
-          types: pokemon.types,
-          stats: pokemon.stats
-        })
+      const data = await analyzePokemon({
+        name: pokemon.name,
+        id: pokemon.id,
+        types: pokemon.types,
+        stats: pokemon.stats,
       });
-
-      if (!response.ok) {
-        throw new Error("Sovereign connection failed to respond.");
-      }
-
-      const data = await response.json();
       setLore(data);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
       setError("Unable to establish link with the Gemini Core. Procedural static received.");
     } finally {

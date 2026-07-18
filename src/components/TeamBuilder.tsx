@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Pokemon, TeamResonance } from "../types";
+import { analyzeTeamResonance } from "../lib/aethericApi";
 import { Trash2, Sparkles, Loader2, Cpu, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -18,19 +19,9 @@ export default function TeamBuilder({ team, onRemoveFromTeam }: TeamBuilderProps
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("/api/gemini/team-resonance", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ team })
-      });
-
-      if (!response.ok) {
-        throw new Error("Resonance coupling broke down.");
-      }
-
-      const data = await response.json();
+      const data = await analyzeTeamResonance(team);
       setResonance(data);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
       setError("Resonance matrix failed to harmonize. Procedural feedback detected.");
     } finally {

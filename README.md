@@ -1,20 +1,31 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Aetherium Pokédex
 
-# Run and deploy your AI Studio app
+Celestial Pokédex UI — curated relics, PokeAPI transmitter, and aetheric team synthesis.
 
-This contains everything you need to run your app locally.
+**Live site:** https://nafiul-earth.github.io/aetherium-pokedex/
 
-View your app in AI Studio: https://ai.studio/apps/9bdf31f4-7181-4e27-ba63-8e089edd9425
+**Repo:** https://github.com/nafiul-earth/aetherium-pokedex
 
-## Run Locally
+## Run locally (with Gemini proxy)
 
-**Prerequisites:**  Node.js
+1. `npm install`
+2. Copy `.env.example` → `.env.local` and set `GEMINI_API_KEY`
+3. `npm run dev` → http://localhost:3000
 
+## Static / GitHub Pages
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Pages hosts the Vite client only (no Express). Lore and team resonance use procedural fallbacks when `/api/gemini/*` is unavailable. PokeAPI searches still work.
+
+```bash
+npm run build:pages
+npm run preview
+```
+
+### Deploy checklist
+
+1. Push this app to `nafiul-earth/aetherium-pokedex` on the `main` branch
+2. Repo **Settings → Pages → Source: GitHub Actions**
+3. The workflow `.github/workflows/deploy-pages.yml` builds and deploys on every push to `main`
+4. Site URL: `https://nafiul-earth.github.io/aetherium-pokedex/`
+
+Vite `base` is set to `/aetherium-pokedex/` for the project Pages path.
