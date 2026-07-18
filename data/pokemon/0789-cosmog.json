@@ -1,0 +1,64 @@
+{
+  "id": 789,
+  "name": "Cosmog",
+  "types": [
+    "psychic"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 43,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 29,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 31,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 29,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 31,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 37,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/789.png",
+  "height": 2,
+  "weight": 1,
+  "description": "Its body is made of a gaseous nebula material. It gathers dust from space to grow, slowly condensing stellar matter in its core.",
+  "divineTier": "Cosmic Seed",
+  "ability": "Unaware",
+  "nature": "Bashful",
+  "originLore": "Cosmog is a nebular seed — gaseous stellar dust condensing into a future ultra wormhole. It drifts, gathering cosmic matter until destiny forces metamorphosis.",
+  "lore": {
+    "originEpoch": "Cosmic Seed Condensation",
+    "celestialConcordance": "Innocent and unfinished, Cosmog holds the compressed blueprint of Solgaleo and Lunala within its haze.",
+    "aethericFrequency": "108.0 Hz",
+    "resonanceRating": "61.4%",
+    "divineTier": "Cosmic Seed",
+    "quantumResonators": [
+      {
+        "name": "Teleport",
+        "description": "Blinks short distances by folding local space-dust."
+      },
+      {
+        "name": "Nebula Drift",
+        "description": "Ignores opposing stat stages while gathering stellar mass."
+      }
+    ]
+  }
+}

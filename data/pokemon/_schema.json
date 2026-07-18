@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nafiul-earth.github.io/aetherium-pokedex/pokemon-record.schema.json",
+  "title": "Aetherium PokemonRecord",
+  "type": "object",
+  "required": ["id", "name", "types", "stats", "height", "weight", "description"],
+  "properties": {
+    "id": { "type": "integer", "minimum": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "types": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "stats": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "value", "max"],
+        "properties": {
+          "name": { "type": "string" },
+          "value": { "type": "number" },
+          "max": { "type": "number" }
+        }
+      }
+    },
+    "image": { "type": "string", "description": "Filename under public/assets/pokemon/" },
+    "cry": { "type": "string", "description": "Cry filename under public/assets/pokemon/" },
+    "sprite": { "type": "string", "description": "Remote artwork URL when image omitted" },
+    "height": { "type": "number" },
+    "weight": { "type": "number" },
+    "description": { "type": "string", "description": "Temporal Registry short text" },
+    "originLore": { "type": "string", "description": "Origin Lore long text" },
+    "ability": { "type": "string" },
+    "nature": { "type": "string" },
+    "divineTier": { "type": "string" },
+    "lore": {
+      "type": "object",
+      "required": [
+        "originEpoch",
+        "celestialConcordance",
+        "aethericFrequency",
+        "resonanceRating",
+        "quantumResonators",
+        "divineTier"
+      ],
+      "properties": {
+        "originEpoch": { "type": "string" },
+        "celestialConcordance": { "type": "string" },
+        "aethericFrequency": { "type": "string" },
+        "resonanceRating": { "type": "string" },
+        "divineTier": { "type": "string" },
+        "quantumResonators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "description"],
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

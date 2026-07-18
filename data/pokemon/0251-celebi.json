@@ -1,0 +1,65 @@
+{
+  "id": 251,
+  "name": "Celebi",
+  "types": [
+    "psychic",
+    "grass"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 100,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/251.png",
+  "height": 6,
+  "weight": 50,
+  "description": "This Pokémon came from the future by crossing over time. It is thought that so long as Celebi appears, a bright and shining future awaits.",
+  "divineTier": "Chronal Sprite",
+  "ability": "Natural Cure",
+  "nature": "Gentle",
+  "originLore": "Celebi slips between centuries carrying seeds of restored futures. Wherever it appears, blighted timelines begin to green again.",
+  "lore": {
+    "originEpoch": "Chronal Sprite Continuum",
+    "celestialConcordance": "Celebi's presence is an omen: if the sprite arrives, a brighter branch of history still exists.",
+    "aethericFrequency": "528.0 Hz",
+    "resonanceRating": "95.0%",
+    "divineTier": "Chronal Sprite",
+    "quantumResonators": [
+      {
+        "name": "Time Travel",
+        "description": "Phases the host across temporal nodes without tearing space."
+      },
+      {
+        "name": "Natural Cure",
+        "description": "Purges status corruption when it withdraws from conflict."
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Pokemon } from "../types";
-import { TYPE_GLOWS, getTierForId } from "../data/curatedPokemon";
+import { TYPE_GLOWS, resolveDivineTier } from "../data/curatedPokemon";
 import { motion } from "motion/react";
 
 interface PokemonCardProps {
@@ -14,7 +14,7 @@ export default function PokemonCard({ pokemon, onSelect, index }: PokemonCardPro
   // Find primary type glow setting
   const primaryType = pokemon.types[0]?.toLowerCase() || "normal";
   const typeStyle = TYPE_GLOWS[primaryType] || TYPE_GLOWS.normal;
-  const tierLabel = pokemon.divineTier || getTierForId(pokemon.id);
+  const tierLabel = resolveDivineTier(pokemon);
 
   return (
     <motion.div

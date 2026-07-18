@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Pokemon } from "../types";
 import { Search, Loader2, Compass, Orbit, Zap, AlertTriangle } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import { getTierForId } from "../data/curatedPokemon";
 
 interface TransmitterProps {
   onAddToLibrary: (pokemon: Pokemon) => void;
@@ -88,7 +87,7 @@ export default function Transmitter({ onAddToLibrary, onAddToTeam, isInTeam }: T
         height: pokemonData.height,
         weight: pokemonData.weight,
         description,
-        divineTier: getTierForId(pokemonData.id)
+        divineTier: "Scanned Relic",
       };
 
       setScannedPokemon(scanned);

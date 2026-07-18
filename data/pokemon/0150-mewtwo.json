@@ -1,0 +1,64 @@
+{
+  "id": 150,
+  "name": "Mewtwo",
+  "types": [
+    "psychic"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 106,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 110,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 90,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 154,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 90,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 130,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+  "height": 20,
+  "weight": 1220,
+  "description": "A Pokémon created by recombining Mew's genes. It's said to have the most savage heart among all Pokémon, built entirely for spatial domination.",
+  "divineTier": "Gene-Spliced Tyrant",
+  "ability": "Pressure",
+  "nature": "Timid",
+  "originLore": "Forged from Mew's genome in a clandestine lab, Mewtwo was built for spatial domination. Its heart carries the heaviest psychic pressure recorded in the Aetherium registry.",
+  "lore": {
+    "originEpoch": "Gene-Spliced Modern Epoch",
+    "celestialConcordance": "Mewtwo rejects creators and cages alike — its will alone writes the next coordinate of power.",
+    "aethericFrequency": "754.8 Hz",
+    "resonanceRating": "93.4%",
+    "divineTier": "Gene-Spliced Tyrant",
+    "quantumResonators": [
+      {
+        "name": "Psystrike",
+        "description": "Converts pure will into a physical impact vector."
+      },
+      {
+        "name": "Barrier Lattice",
+        "description": "Erects multi-layer psychic shields around the host frame."
+      }
+    ]
+  }
+}

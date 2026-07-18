@@ -1,0 +1,65 @@
+{
+  "id": 487,
+  "name": "Giratina",
+  "types": [
+    "ghost",
+    "dragon"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 150,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 90,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png",
+  "height": 45,
+  "weight": 7500,
+  "description": "It was banished for its violence. It silently gazed upon the old world from the Distortion World, where knowledge and physics are reversed.",
+  "divineTier": "Void Archon",
+  "ability": "Pressure",
+  "nature": "Serious",
+  "originLore": "Banished for violence that threatened creation's ledger, Giratina rules the Distortion World — a mirror realm where physics run in reverse and forgotten truths accumulate.",
+  "lore": {
+    "originEpoch": "Void Partition Era",
+    "celestialConcordance": "From the Distortion World, Giratina gazes upon the old continuum, ready to invert any law that grows too absolute.",
+    "aethericFrequency": "221.7 Hz",
+    "resonanceRating": "84.1%",
+    "divineTier": "Void Archon",
+    "quantumResonators": [
+      {
+        "name": "Shadow Force",
+        "description": "Phases through dimensional membranes to strike from inverted space."
+      },
+      {
+        "name": "Antimatter Veil",
+        "description": "Cloaks presence inside reversed physical constants."
+      }
+    ]
+  }
+}

@@ -29,3 +29,28 @@ npm run preview
 4. Site URL: `https://nafiul-earth.github.io/aetherium-pokedex/`
 
 Vite `base` is set to `/aetherium-pokedex/` for the project Pages path.
+
+## Images / static assets
+
+Drop files under `public/assets/images/` (subfolders: `pokemon`, `ui`, `backgrounds`, `icons`). Vite copies them into the deploy as `/aetherium-pokedex/assets/...`.
+
+```tsx
+import { imageUrl } from "@/src/lib/assets";
+<img src={imageUrl("pokemon/arceus.png")} alt="Arceus" />
+```
+
+See `public/assets/README.md` for folder layout tips.
+
+## Pokémon catalog (JSON-driven)
+
+Every Core entry is a file in `data/pokemon/`. The UI does **not** hardcode Pokémon — edit JSON, refresh, it updates.
+
+| Path | Role |
+|------|------|
+| `data/pokemon/*.json` | One Pokémon each (stats, lore, ability, …) |
+| `data/catalog.json` | `defaultTeamIds` for the synthesizer |
+| `data/epochs.json` | Ancient Epochs timeline tab |
+| `public/assets/pokemon/` | Optional local `image` / `cry` files |
+
+See `data/pokemon/README.md` for the full field map.
+

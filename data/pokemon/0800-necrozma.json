@@ -1,0 +1,64 @@
+{
+  "id": 800,
+  "name": "Necrozma",
+  "types": [
+    "psychic"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 97,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 107,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 101,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 127,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 89,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 79,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/800.png",
+  "height": 24,
+  "weight": 2300,
+  "description": "An ancient creature that resembles black prism glass. It is said to have come from another world in search of light to fuel its hollow matrix.",
+  "divineTier": "Refractive Prism",
+  "ability": "Prism Armor",
+  "nature": "Quiet",
+  "originLore": "Necrozma arrived as black prism glass starving for light. It drains radiance from entire worlds to refill a hollow matrix that once shone as the blaze that lit Ultra Space.",
+  "lore": {
+    "originEpoch": "Ultra Dark Exodus",
+    "celestialConcordance": "Where Necrozma feeds, suns dim. Where it is sated, prism light fractures into living weapons.",
+    "aethericFrequency": "333.3 Hz",
+    "resonanceRating": "82.6%",
+    "divineTier": "Refractive Prism",
+    "quantumResonators": [
+      {
+        "name": "Photon Geyser",
+        "description": "Erupts stored light as a vertical annihilation column."
+      },
+      {
+        "name": "Prism Armor",
+        "description": "Diffuses incoming force across crystal facets."
+      }
+    ]
+  }
+}

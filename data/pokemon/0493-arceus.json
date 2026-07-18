@@ -1,0 +1,64 @@
+{
+  "id": 493,
+  "name": "Arceus",
+  "types": [
+    "normal"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 120,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png",
+  "height": 32,
+  "weight": 3200,
+  "description": "It is described in mythology as the Pokémon that shaped the universe with its 1,000 arms. Born from a cosmic egg before existence was codified.",
+  "divineTier": "Origin Genesis",
+  "ability": "Multitype",
+  "nature": "Eternal",
+  "originLore": "Before the first sunrise of the universe, Arceus shaped the continuum with a thousand radiant arms. Every subsequent divine vector — Dialga, Palkia, Giratina — is a shard of that original creation pulse. Its registry remains the master key of the Aetherium Core.",
+  "lore": {
+    "originEpoch": "Epoch Delta-3451 (Ancient Timeline)",
+    "celestialConcordance": "When the cosmic gates align with Arceus, a burst of normal energy ripples across the celestial fabrics. Legend says this entity commands the core structures of reality.",
+    "aethericFrequency": "588.9 Hz",
+    "resonanceRating": "86.0%",
+    "divineTier": "Cosmic Archon",
+    "quantumResonators": [
+      {
+        "name": "Sovereign Aura",
+        "description": "Projects a high-frequency field that pacifies local chronal distortions."
+      },
+      {
+        "name": "Aetherial Synthesis",
+        "description": "Harnesses pure normal energy to transmute spatial coordinates."
+      }
+    ]
+  }
+}

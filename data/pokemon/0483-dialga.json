@@ -1,0 +1,65 @@
+{
+  "id": 483,
+  "name": "Dialga",
+  "types": [
+    "steel",
+    "dragon"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 150,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 90,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/483.png",
+  "height": 54,
+  "weight": 6830,
+  "description": "It has the power to control time. It is spoken of in Sinnoh myths as a deity that began moving when Dialga was born.",
+  "divineTier": "Temporal Sovereign",
+  "ability": "Pressure",
+  "nature": "Adamant",
+  "originLore": "Dialga crystallized the river of time itself. When its heart began to beat, entropy became measurable and history acquired a forward arrow. Sinnoh myths still treat its roar as the first clock of creation.",
+  "lore": {
+    "originEpoch": "Chronal Bifurcation (-4.6e9)",
+    "celestialConcordance": "Where Dialga walks, seconds braid into law. Opposing timelines collapse into a single sovereign flow.",
+    "aethericFrequency": "412.0 Hz",
+    "resonanceRating": "91.2%",
+    "divineTier": "Temporal Sovereign",
+    "quantumResonators": [
+      {
+        "name": "Roar of Time",
+        "description": "Forces local chronal fields into a locked linear vector."
+      },
+      {
+        "name": "Adamant Lattice",
+        "description": "Hardens temporal coordinates against paradox intrusion."
+      }
+    ]
+  }
+}

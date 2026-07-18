@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Pokemon, AethericLore } from "../types";
-import { TYPE_GLOWS, getTierForId } from "../data/curatedPokemon";
+import { TYPE_GLOWS, resolveDivineTier } from "../data/curatedPokemon";
 import { analyzePokemon } from "../lib/aethericApi";
-import { X, Play, Loader2, Sparkles, Shield, Cpu, Activity, Ruler, Weight } from "lucide-react";
+import { X, Play, Loader2, Sparkles, Shield, Cpu, Activity, Ruler, Weight, Zap, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import PokemonImageZoom, { ZoomTriggerButton } from "./PokemonImageZoom";
 
 interface DetailViewProps {
   pokemon: Pokemon;
@@ -17,56 +18,79 @@ export default function DetailView({ pokemon, onClose, onAddToTeam, isInTeam = f
   const [loadingLore, setLoadingLore] = useState(false);
   const [isPlayingCry, setIsPlayingCry] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [imageZoomOpen, setImageZoomOpen] = useState(false);
 
   const primaryType = pokemon.types[0]?.toLowerCase() || "normal";
   const typeStyle = TYPE_GLOWS[primaryType] || TYPE_GLOWS.normal;
-  const tierLabel = pokemon.divineTier || getTierForId(pokemon.id);
+  const tierLabel = resolveDivineTier(pokemon);
 
-  // Play official PokeAPI cry
+  // Play cry: local asset from JSON first, then PokeAPI, then synth fallback
   const playCry = () => {
     if (isPlayingCry) return;
     setIsPlayingCry(true);
-    
-    // PokeAPI has .ogg files for legacy and latest cries
-    const audioUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/cries/${pokemon.id}.ogg`;
-    const audio = new Audio(audioUrl);
-    audio.volume = 0.4;
-    
-    audio.play()
-      .then(() => {
-        // Stop playing animation when audio completes or roughly after 1.5 seconds
-        setTimeout(() => setIsPlayingCry(false), 1600);
-      })
-      .catch((err) => {
-        console.warn("Failed to play PokeAPI .ogg cry, trying fallback:", err);
-        // Fallback to high pitch synth if API block or network issue
-        try {
-          const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
-          const osc = audioCtx.createOscillator();
-          const gainNode = audioCtx.createGain();
-          
-          osc.connect(gainNode);
-          gainNode.connect(audioCtx.destination);
-          
-          osc.type = "sine";
-          osc.frequency.setValueAtTime(300 + pokemon.id * 0.8, audioCtx.currentTime);
-          osc.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 0.8);
-          
-          gainNode.gain.setValueAtTime(0.15, audioCtx.currentTime);
-          gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.8);
-          
-          osc.start();
-          osc.stop(audioCtx.currentTime + 0.8);
-          
-          setTimeout(() => setIsPlayingCry(false), 800);
-        } catch (fallbackErr) {
-          setIsPlayingCry(false);
-        }
+
+    const playSynthFallback = () => {
+      try {
+        const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+
+        osc.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(300 + pokemon.id * 0.8, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 0.8);
+
+        gainNode.gain.setValueAtTime(0.15, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.8);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.8);
+
+        setTimeout(() => setIsPlayingCry(false), 800);
+      } catch {
+        setIsPlayingCry(false);
+      }
+    };
+
+    const tryPlay = (url: string, onFail: () => void) => {
+      const audio = new Audio(url);
+      audio.volume = 0.4;
+      audio.play()
+        .then(() => {
+          const done = () => setIsPlayingCry(false);
+          audio.onended = done;
+          setTimeout(done, 4000);
+        })
+        .catch(onFail);
+    };
+
+    if (pokemon.cry) {
+      tryPlay(pokemon.cry, () => {
+        console.warn("Local cry failed, trying PokeAPI:", pokemon.cry);
+        tryPlay(
+          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/cries/${pokemon.id}.ogg`,
+          playSynthFallback,
+        );
       });
+      return;
+    }
+
+    tryPlay(
+      `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/cries/${pokemon.id}.ogg`,
+      playSynthFallback,
+    );
   };
 
-  // Trigger Gemini analysis (falls back to procedural lore on GitHub Pages)
+  // Prefer authored JSON lore; otherwise channel Gemini / procedural fallback
   const channelAethericRevelation = async () => {
+    if (pokemon.lore) {
+      setLore(pokemon.lore);
+      setLoadingLore(false);
+      setError(null);
+      return;
+    }
     setLoadingLore(true);
     setError(null);
     try {
@@ -85,8 +109,9 @@ export default function DetailView({ pokemon, onClose, onAddToTeam, isInTeam = f
     }
   };
 
-  // Auto-channel on first opening for curated Pokemon to offer a rich initially loaded state
+  // Auto-channel on open (uses JSON lore instantly when present)
   useEffect(() => {
+    setImageZoomOpen(false);
     channelAethericRevelation();
   }, [pokemon.id]);
 
@@ -149,22 +174,26 @@ export default function DetailView({ pokemon, onClose, onAddToTeam, isInTeam = f
               <div className="absolute w-44 h-44 border border-solar-gold/10 rounded-full animate-orbit-slow" />
               <div className="absolute w-36 h-36 border border-aether-cyan/10 rounded-full animate-orbit-fast" />
               
-              {/* Pokemon official artwork breaking out */}
+              {/* Pokemon official artwork — click to zoom */}
               <motion.img
                 id={`detail-pokemon-img-${pokemon.id}`}
                 src={pokemon.sprite}
                 alt={pokemon.name}
-                className="w-48 h-48 object-contain relative z-20 drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]"
+                className="w-48 h-48 object-contain relative z-20 drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] cursor-zoom-in"
                 referrerPolicy="no-referrer"
                 animate={{ y: [0, -8, 0] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                onClick={() => setImageZoomOpen(true)}
+                title="Click to zoom"
               />
+
+              <ZoomTriggerButton onClick={() => setImageZoomOpen(true)} />
 
               {/* Sound activator badge */}
               <button
                 id="play-cry-btn"
                 onClick={playCry}
-                className={`absolute bottom-3 right-3 flex items-center gap-1.5 px-3 py-1 bg-void-dark/85 border border-solar-gold/40 hover:border-solar-gold hover:bg-void-dark transition-all rounded text-[10px] font-mono tracking-widest text-solar-gold uppercase ${isPlayingCry ? "shadow-[0_0_12px_rgba(242,202,80,0.4)]" : ""}`}
+                className={`absolute bottom-3 right-3 flex items-center gap-1.5 px-3 py-1 bg-void-dark/85 border border-solar-gold/40 hover:border-solar-gold hover:bg-void-dark transition-all rounded text-[10px] font-mono tracking-widest text-solar-gold uppercase z-30 ${isPlayingCry ? "shadow-[0_0_12px_rgba(242,202,80,0.4)]" : ""}`}
               >
                 <Play className={`w-3 h-3 ${isPlayingCry ? "animate-ping text-aether-cyan" : ""}`} />
                 {isPlayingCry ? "Resonating..." : "Play Cry"}
@@ -187,6 +216,24 @@ export default function DetailView({ pokemon, onClose, onAddToTeam, isInTeam = f
                   <span className="block text-sm font-semibold text-white font-mono">{pokemon.weight / 10} kg</span>
                 </div>
               </div>
+              {pokemon.ability && (
+                <div className="bg-void-light/20 border border-white/5 p-3 rounded-lg flex items-center gap-2.5">
+                  <Zap className="w-4 h-4 text-nebula-purple" />
+                  <div>
+                    <span className="block text-[9px] font-mono text-gray-400 tracking-wider uppercase">Ability</span>
+                    <span className="block text-sm font-semibold text-white font-mono">{pokemon.ability}</span>
+                  </div>
+                </div>
+              )}
+              {pokemon.nature && (
+                <div className="bg-void-light/20 border border-white/5 p-3 rounded-lg flex items-center gap-2.5">
+                  <Shield className="w-4 h-4 text-aether-cyan" />
+                  <div>
+                    <span className="block text-[9px] font-mono text-gray-400 tracking-wider uppercase">Nature</span>
+                    <span className="block text-sm font-semibold text-white font-mono">{pokemon.nature}</span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Basic Lore Box */}
@@ -198,6 +245,19 @@ export default function DetailView({ pokemon, onClose, onAddToTeam, isInTeam = f
                 {pokemon.description}
               </p>
             </div>
+
+            {/* Origin Lore */}
+            {pokemon.originLore && (
+              <div className="w-full mt-4 bg-void-light/10 border border-solar-gold/15 p-4 rounded-xl relative">
+                <div className="absolute top-0 left-4 -translate-y-1/2 bg-void-navy px-2 text-[9px] font-mono text-aether-cyan tracking-widest uppercase flex items-center gap-1">
+                  <BookOpen className="w-3 h-3" />
+                  Origin Lore
+                </div>
+                <p className="text-xs text-gray-300 leading-relaxed font-sans mt-1">
+                  {pokemon.originLore}
+                </p>
+              </div>
+            )}
 
             {/* Team management button */}
             {onAddToTeam && (
@@ -351,8 +411,8 @@ export default function DetailView({ pokemon, onClose, onAddToTeam, isInTeam = f
                 </div>
               )}
 
-              {/* Force trigger button at bottom corner if lore is already loaded to re-synthesize */}
-              {lore && !loadingLore && (
+              {/* Force trigger only when lore is Gemini-generated (no authored JSON lore) */}
+              {lore && !loadingLore && !pokemon.lore && (
                 <div className="flex justify-end mt-4 pt-3 border-t border-white/5">
                   <button
                     id="re-synthesize-btn"
@@ -370,6 +430,17 @@ export default function DetailView({ pokemon, onClose, onAddToTeam, isInTeam = f
 
         </div>
       </motion.div>
+
+      <AnimatePresence>
+        {imageZoomOpen && (
+          <PokemonImageZoom
+            src={pokemon.sprite}
+            name={pokemon.name}
+            open={imageZoomOpen}
+            onClose={() => setImageZoomOpen(false)}
+          />
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }

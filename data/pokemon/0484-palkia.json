@@ -1,0 +1,65 @@
+{
+  "id": 484,
+  "name": "Palkia",
+  "types": [
+    "water",
+    "dragon"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 90,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 150,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 100,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png",
+  "height": 42,
+  "weight": 3360,
+  "description": "It has the ability to distort space. It is described as a deity in Sinnoh-region mythology. Its breath stabilizes the dimensions.",
+  "divineTier": "Spatial Sovereign",
+  "ability": "Pressure",
+  "nature": "Modest",
+  "originLore": "Palkia unfolded the void into traversable space. Its breath is said to stabilize dimensional folds so stars can hold their orbits without tearing the grid.",
+  "lore": {
+    "originEpoch": "Prismatic Inflation (-3.8e9)",
+    "celestialConcordance": "Palkia's breath stretches the lattice of space until distant worlds become reachable coordinates.",
+    "aethericFrequency": "398.4 Hz",
+    "resonanceRating": "89.5%",
+    "divineTier": "Spatial Sovereign",
+    "quantumResonators": [
+      {
+        "name": "Spacial Rend",
+        "description": "Cuts a corridor through folded dimensions."
+      },
+      {
+        "name": "Pearl Horizon",
+        "description": "Anchors volume so reality does not collapse inward."
+      }
+    ]
+  }
+}

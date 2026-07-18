@@ -1,0 +1,65 @@
+{
+  "id": 1008,
+  "name": "Miraidon",
+  "types": [
+    "electric",
+    "dragon"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 85,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 135,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 115,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 135,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1008.png",
+  "height": 28,
+  "weight": 2400,
+  "description": "An futuristic electro-relic observed in the Great Crater of Paldea. Its carbon-fiber skin glows with artificial stellar energy.",
+  "divineTier": "Chronal Future-Relic",
+  "ability": "Hadron Engine",
+  "nature": "Modest",
+  "originLore": "Miraidon is a future-relic electro-dragon witnessed in Paldea's Great Crater. Carbon-fiber skin channels artificial stellar current through a Hadron Engine.",
+  "lore": {
+    "originEpoch": "Chronal Future-Relic",
+    "celestialConcordance": "Miraidon's engine rewrites the battlefield into Electric Terrain, accelerating every allied circuit.",
+    "aethericFrequency": "1.02 GHz",
+    "resonanceRating": "87.9%",
+    "divineTier": "Chronal Future-Relic",
+    "quantumResonators": [
+      {
+        "name": "Electro Drift",
+        "description": "Rides charged rails of its own making at near-instant traversal."
+      },
+      {
+        "name": "Hadron Engine",
+        "description": "Floods the field with electric terrain resonance."
+      }
+    ]
+  }
+}

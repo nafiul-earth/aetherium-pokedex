@@ -1,0 +1,30 @@
+[
+  {
+    "id": "genesis",
+    "title": "Epoch of Genesis",
+    "era": "0.00e+00 Earth-Years",
+    "resonanceKey": "Arceus (Creation Prime)",
+    "description": "Before physical dimensions, matter was compressed in a singular divine kernel. The original frequency was birthed here, codifying the cosmic registry."
+  },
+  {
+    "id": "chronos",
+    "title": "Chronal Bifurcation",
+    "era": "-4.6 Billion Earth-Years",
+    "resonanceKey": "Dialga & Celebi Harmony",
+    "description": "The crystallization of temporal flows. Time transitioned from a fluid multidimensional storm into a linear vector, enabling entropy and evolutionary progress."
+  },
+  {
+    "id": "spatial",
+    "title": "Prismatic Inflation",
+    "era": "-3.8 Billion Earth-Years",
+    "resonanceKey": "Palkia (Sovereign Array)",
+    "description": "Space expanded exponentially. Stars ignited, and raw dimensional folds stabilized into the 3D grid layout. Void zones like the Distortion Realm were partitioned."
+  },
+  {
+    "id": "mutation",
+    "title": "Extraterrestrial Splicing",
+    "era": "Modern Tech Epoch",
+    "resonanceKey": "Deoxys & Mewtwo Engines",
+    "description": "A merger of alien genetic virus material and high-tech human bio-splicing. Represents the hyper-advanced technological layer blending with organic divinity."
+  }
+]

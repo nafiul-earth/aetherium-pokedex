@@ -1,0 +1,64 @@
+{
+  "id": 386,
+  "name": "Deoxys",
+  "types": [
+    "psychic"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 50,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 150,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 50,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 150,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 50,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 150,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/386.png",
+  "height": 17,
+  "weight": 608,
+  "description": "An alien virus that fell to Earth on a meteor underwent a cellular mutation upon exposure to a high-energy laser beam, emerging as a psychic god.",
+  "divineTier": "Mutated Singularity",
+  "ability": "Pressure",
+  "nature": "Hasty",
+  "originLore": "An extraterrestrial virus rode a meteor into Earth's gravity well. A high-energy laser mutated its cells into Deoxys — a psychic singularity with four combat morphologies.",
+  "lore": {
+    "originEpoch": "Extraterrestrial Splicing",
+    "celestialConcordance": "Deoxys rebuilds its frame in heartbeats, trading durability for speed or the reverse as the battle matrix demands.",
+    "aethericFrequency": "901.0 Hz",
+    "resonanceRating": "77.3%",
+    "divineTier": "Mutated Singularity",
+    "quantumResonators": [
+      {
+        "name": "Psycho Boost",
+        "description": "Overclocks psychic output until the frame destabilizes."
+      },
+      {
+        "name": "Form Shift",
+        "description": "Reconfigures cellular armor between Attack, Defense, Speed, and Normal cores."
+      }
+    ]
+  }
+}

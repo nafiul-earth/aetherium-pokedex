@@ -6,7 +6,7 @@ import DetailView from "./components/DetailView";
 import TeamBuilder from "./components/TeamBuilder";
 import Transmitter from "./components/Transmitter";
 import AncientEpochs from "./components/AncientEpochs";
-import { CURATED_POKEMON, getTierForId } from "./data/curatedPokemon";
+import { CURATED_POKEMON, getDefaultTeam, resolveDivineTier } from "./data/curatedPokemon";
 import { Pokemon } from "./types";
 import { Sparkles, ShieldCheck, Database, SlidersHorizontal, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
@@ -15,18 +15,40 @@ export default function App() {
   const [activeTab, setActiveTab] = useState("core");
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
   
-  // Initialize library with the 12 beautifully pre-configured cosmic Pokémon
+  // Catalog JSON is source of truth; localStorage only keeps Transmitter extras
   const [library, setLibrary] = useState<Pokemon[]>(() => {
-    const saved = localStorage.getItem("aether_library_v2");
-    return saved ? JSON.parse(saved) : CURATED_POKEMON;
+    const catalogById = new Map(CURATED_POKEMON.map((p) => [p.id, p]));
+    let extras: Pokemon[] = [];
+    try {
+      const savedExtras = localStorage.getItem("aether_library_extras_v3");
+      extras = savedExtras ? JSON.parse(savedExtras) : [];
+      if (!Array.isArray(extras)) extras = [];
+    } catch {
+      extras = [];
+    }
+    const uniqueExtras = extras.filter((p) => p && !catalogById.has(p.id));
+    // Always prefer live JSON catalog entries over anything cached
+    return [...CURATED_POKEMON, ...uniqueExtras];
   });
 
-  // Pre-populate the team with Arceus & Dialga for an awesome starting synthesizer experience
+  // Pre-populate the team from data/catalog.json defaultTeamIds
   const [team, setTeam] = useState<Pokemon[]>(() => {
-    const saved = localStorage.getItem("aether_team_v2");
-    if (saved) return JSON.parse(saved);
-    // Defaults
-    return CURATED_POKEMON.slice(0, 2);
+    try {
+      const saved = localStorage.getItem("aether_team_v3");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          // Rehydrate catalog members from JSON so UI fields stay current
+          return parsed.map((p: Pokemon) => {
+            const fresh = CURATED_POKEMON.find((c) => c.id === p.id);
+            return fresh ?? p;
+          });
+        }
+      }
+    } catch {
+      // ignore corrupt storage
+    }
+    return getDefaultTeam();
   });
 
   // Filters state
@@ -34,13 +56,15 @@ export default function App() {
   const [selectedType, setSelectedType] = useState("all");
   const [selectedTier, setSelectedTier] = useState("all");
 
-  // Sync state to localStorage
+  // Persist only Pokémon not already defined in data/pokemon/*.json
   useEffect(() => {
-    localStorage.setItem("aether_library_v2", JSON.stringify(library));
+    const catalogIds = new Set(CURATED_POKEMON.map((p) => p.id));
+    const extras = library.filter((p) => !catalogIds.has(p.id));
+    localStorage.setItem("aether_library_extras_v3", JSON.stringify(extras));
   }, [library]);
 
   useEffect(() => {
-    localStorage.setItem("aether_team_v2", JSON.stringify(team));
+    localStorage.setItem("aether_team_v3", JSON.stringify(team));
   }, [team]);
 
   // Add a newly scanned Pokemon to the local library catalog
@@ -76,7 +100,7 @@ export default function App() {
 
   // Extract unique divine tiers
   const allAvailableTiers = Array.from(
-    new Set(library.map((p) => p.divineTier || getTierForId(p.id)))
+    new Set(library.map((p) => resolveDivineTier(p)))
   ).sort() as string[];
 
   // Filter the library list
@@ -84,7 +108,7 @@ export default function App() {
     const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           String(p.id).includes(searchQuery);
     const matchesType = selectedType === "all" || p.types.includes(selectedType);
-    const matchesTier = selectedTier === "all" || (p.divineTier || getTierForId(p.id)) === selectedTier;
+    const matchesTier = selectedTier === "all" || resolveDivineTier(p) === selectedTier;
     return matchesSearch && matchesType && matchesTier;
   });
 
@@ -227,7 +251,10 @@ export default function App() {
                     <PokemonCard
                       key={pokemon.id}
                       pokemon={pokemon}
-                      onSelect={(p) => setSelectedPokemon(p)}
+                      onSelect={(p) => {
+                        const fresh = CURATED_POKEMON.find((c) => c.id === p.id) ?? p;
+                        setSelectedPokemon(fresh);
+                      }}
                       index={idx}
                     />
                   ))}

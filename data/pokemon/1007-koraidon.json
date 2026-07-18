@@ -1,0 +1,65 @@
+{
+  "id": 1007,
+  "name": "Koraidon",
+  "types": [
+    "fighting",
+    "dragon"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 135,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 115,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 85,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 135,
+      "max": 255
+    }
+  ],
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1007.png",
+  "height": 25,
+  "weight": 2900,
+  "description": "A prehistoric entity of fierce primordial power. Its brute strength is augmented by raw solar vibrations channeled through its scales.",
+  "divineTier": "Chronal Past-Relic",
+  "ability": "Orichalcum Pulse",
+  "nature": "Adamant",
+  "originLore": "Koraidon is a prehistoric fighting-dragon whose scales drink solar vibration. Orichalcum Pulse turns daylight into raw kinetic supremacy.",
+  "lore": {
+    "originEpoch": "Chronal Past-Relic",
+    "celestialConcordance": "Under open sun, Koraidon's orichalcum heart hammers the arena into a furnace of ancient strength.",
+    "aethericFrequency": "445.6 Hz",
+    "resonanceRating": "90.1%",
+    "divineTier": "Chronal Past-Relic",
+    "quantumResonators": [
+      {
+        "name": "Collision Course",
+        "description": "Converts sprint momentum into a crushing impact."
+      },
+      {
+        "name": "Orichalcum Pulse",
+        "description": "Ignites Sunlit Terrain and amplifies physical output."
+      }
+    ]
+  }
+}
