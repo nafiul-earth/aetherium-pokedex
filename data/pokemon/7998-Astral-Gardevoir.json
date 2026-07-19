@@ -1,0 +1,66 @@
+{
+  "id": 7998,
+  "name": "Astral-Gardevoir (Celestial Oracle)",
+  "types": [
+    "psychic",
+    "fairy",
+    "astral"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 90,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 85,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 95,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 165,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 155,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 110,
+      "max": 255
+    }
+  ],
+  "sprite": "{{DATA:IMAGE:IMAGE_123}}",
+  "height": 16,
+  "weight": 48.4,
+  "description": "A divine synthesis of Gardevoir and Gothitelle. It acts as the multiversal oracle, seeing through the veil of time and space to predict entropic anomalies before they manifest.",
+  "divineTier": "Celestial Oracle",
+  "ability": "Astral Sight / Trace (Void)",
+  "nature": "Timid",
+  "originLore": "Born from the convergence of pure empathy and the cosmic abyss. This entity does not merely sense emotions; it feels the collective pulse of the multiversal core, weaving the threads of destiny into its gothic gown.",
+  "lore": {
+    "originEpoch": "Astral Resonance Epoch",
+    "celestialConcordance": "The Astral-Gardevoir serves as the bridge between the creators and the created, translating the chaotic noise of the void into harmonic cosmic signals.",
+    "aethericFrequency": "888.4 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Celestial Oracle",
+    "quantumResonators": [
+      {
+        "name": "Moonblast (Astral)",
+        "description": "Focuses the light of dying stars into a concentrated beam of purifying energy."
+      },
+      {
+        "name": "Oracle's Decree",
+        "description": "Bends reality to ensure a predicted outcome, guaranteeing the next strategic vector."
+      }
+    ]
+  }
+}
