@@ -1,0 +1,66 @@
+{
+  "id": 151,
+  "name": "Psy-Bell Mew (Divine Anomaly)",
+  "types": [
+    "psychic",
+    "fairy",
+    "resonance"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 110,
+      "max": 255
+    }
+  ],
+  "sprite": "{{DATA:IMAGE:IMAGE_119}}",
+  "height": 4,
+  "weight": 5.5,
+  "description": "A divine anomaly resulting from the resonance between Mew's primordial genome and Flittle's rhythmic frequencies. It exists as a playful echo of the multiversal core.",
+  "divineTier": "Celestial Echo",
+  "ability": "Synchronize / Frill Resonance (Void)",
+  "nature": "Playful",
+  "originLore": "Emerging from the harmonic overlap of the first ancestor and the rhythmic void. Psy-Bell Mew does not inhabit space so much as it dances through the vibrations of existence, its frilled bells chiming with the music of the spheres.",
+  "lore": {
+    "originEpoch": "Pastel Resonance Epoch",
+    "celestialConcordance": "Psy-Bell Mew serves as the cosmic jester and messenger, turning the static of the abyss into a symphony of light and bubbles.",
+    "aethericFrequency": "777.7 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Celestial Echo",
+    "quantumResonators": [
+      {
+        "name": "Genesis Chiming",
+        "description": "A rhythmic psychic pulse that restores reality to its base state, cleansing all status anomalies."
+      },
+      {
+        "name": "Ethereal Bubble",
+        "description": "Trap threats within a pocket dimension of pure joy, rendering them harmless until the resonance fades."
+      }
+    ]
+  }
+}
