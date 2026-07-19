@@ -1,0 +1,66 @@
+{
+  "id": 7995,
+  "name": "Astral-Naganadel (Void Sovereign)",
+  "types": [
+    "poison",
+    "dragon",
+    "void"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 73,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 113,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 97,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 167,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 107,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 141,
+      "max": 255
+    }
+  ],
+  "sprite": "{{DATA:IMAGE:IMAGE_114}}",
+  "height": 36,
+  "weight": 150.0,
+  "description": "A high-tier synthesis of Naganadel and Necrozma. It exists as the primary needle of the void, capable of piercing the dimensional veil to harvest Ultra Energy from the multiverse core.",
+  "divineTier": "Void Sovereign",
+  "ability": "Beast Boost / Prism Armor (Astral)",
+  "nature": "Naughty",
+  "originLore": "Emerging from the center of an Ultra Wormhole vortex, Astral-Naganadel was forged when Necrozma's light-refracting armor fused with Naganadel's interdimensional biology. It serves as the apex predator of the Aetherium's deeper layers.",
+  "lore": {
+    "originEpoch": "Ultra Resonance Epoch",
+    "celestialConcordance": "Astral-Naganadel converts chaotic void energy into refined multi-colored crystal shards, fueling the engines of the multiversal core.",
+    "aethericFrequency": "912.4 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Void Sovereign",
+    "quantumResonators": [
+      {
+        "name": "Prismatic Sting",
+        "description": "A focused thrust of refracted light that bypasses all dimensional defenses to strike the target's core essence."
+      },
+      {
+        "name": "Void Pulse",
+        "description": "Emits a shockwave of prismatic energy that destabilizes the surrounding space, slowing all entropic decay."
+      }
+    ]
+  }
+}
