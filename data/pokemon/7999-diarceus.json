@@ -1,0 +1,66 @@
+{
+  "id": 7999,
+  "name": "Di-Arceus (Temporal Apex)",
+  "types": [
+    "normal",
+    "steel",
+    "temporal"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 150,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 150,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 120,
+      "max": 255
+    }
+  ],
+  "sprite": "{{DATA:IMAGE:IMAGE_44}}",
+  "height": 32,
+  "weight": 3500,
+  "description": "A majestic fusion of Arceus and Dialga. It governs the flow of time and the crystallization of creation, its very heartbeat syncing the multiversal clock.",
+  "divineTier": "Temporal Architect",
+  "ability": "Pressure / Multitype (Chronos)",
+  "nature": "Adamant",
+  "originLore": "Born from the convergence of the Adamant Orb and the Creator's Wheel, this entity serves as the absolute anchor for the temporal stream. It does not exist within time; it is the duration in which all events unfold.",
+  "lore": {
+    "originEpoch": "Primordial Convergence Epoch",
+    "celestialConcordance": "The Chronos-Arceus preserves the integrity of the timeline, preventing entropic decay by weaving fractured moments into a singular, eternal present.",
+    "aethericFrequency": "999.8 YJ",
+    "resonanceRating": "MAX",
+    "divineTier": "Temporal Architect",
+    "quantumResonators": [
+      {
+        "name": "Roar of Time",
+        "description": "Unleashes a shockwave that crystallizes the current moment, paralyzing all threats across the timeline."
+      },
+      {
+        "name": "Judgment (Chronos)",
+        "description": "A rain of divine light that slows the target's molecular vibration to a total halt."
+      }
+    ]
+  }
+}
