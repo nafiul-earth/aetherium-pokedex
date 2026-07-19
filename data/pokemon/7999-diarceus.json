@@ -38,7 +38,7 @@
       "max": 255
     }
   ],
-  "sprite": "{{DATA:IMAGE:IMAGE_44}}",
+  "sprite": "assets/pokemon/Diarceus.png",
   "height": 32,
   "weight": 3500,
   "description": "A majestic fusion of Arceus and Dialga. It governs the flow of time and the crystallization of creation, its very heartbeat syncing the multiversal clock.",

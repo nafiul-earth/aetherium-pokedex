@@ -38,7 +38,7 @@
       "max": 255
     }
   ],
-  "sprite": "{{DATA:IMAGE:IMAGE_123}}",
+  "sprite": "assets/pokemon/Astral-Gardevoir.png",
   "height": 16,
   "weight": 48.4,
   "description": "A divine synthesis of Gardevoir and Gothitelle. It acts as the multiversal oracle, seeing through the veil of time and space to predict entropic anomalies before they manifest.",

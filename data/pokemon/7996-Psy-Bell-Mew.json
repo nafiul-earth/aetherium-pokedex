@@ -38,7 +38,7 @@
       "max": 255
     }
   ],
-  "sprite": "{{DATA:IMAGE:IMAGE_119}}",
+  "sprite": "assets/pokemon/Psy-Bell-Mew.png",
   "height": 4,
   "weight": 5.5,
   "description": "A divine anomaly resulting from the resonance between Mew's primordial genome and Flittle's rhythmic frequencies. It exists as a playful echo of the multiversal core.",
