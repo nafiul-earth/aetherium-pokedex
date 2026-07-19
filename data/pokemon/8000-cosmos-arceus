@@ -1,0 +1,66 @@
+{
+  "id": 493,
+  "name": "Cosmos-Arceus (Spatial Apex)",
+  "types": [
+    "normal",
+    "psychic",
+    "spatial"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 120,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 150,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 150,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 120,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Cosmos-Arceus.png",
+  "height": 32,
+  "weight": 3200,
+  "description": "A majestic fusion of Arceus and Palkia. It governs the intersection of spatial dimensions and primordial creation, its very presence warping the vacuum of the Aetherium.",
+  "divineTier": "Spatial Architect",
+  "ability": "Pressure / Multitype (Void)",
+  "nature": "Modest",
+  "originLore": "Born from the convergence of the Spatial Pearl and the Creator's Wheel, this entity serves as the ultimate anchor for the multiversal grid. It does not occupy space; it is the space in which all other things exist.",
+  "lore": {
+    "originEpoch": "Primordial Convergence Epoch",
+    "celestialConcordance": "The Astral-Arceus harmonizes the discord of fractured realities, weaving them into a single, cohesive thread of existence.",
+    "aethericFrequency": "999.8 YJ",
+    "resonanceRating": "MAX",
+    "divineTier": "Spatial Architect",
+    "quantumResonators": [
+      {
+        "name": "Spacial Rend",
+        "description": "Slashes through the fabric of reality to erase threats from the timeline."
+      },
+      {
+        "name": "Judgment (Astral)",
+        "description": "Unleashes cosmic energy that scales based on the target's dimensional instability."
+      }
+    ]
+  }
+}
