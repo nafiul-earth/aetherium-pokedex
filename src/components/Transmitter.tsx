@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Pokemon } from "../types";
+import { CURATED_POKEMON } from "../data/curatedPokemon";
 import { Search, Loader2, Compass, Orbit, Zap, AlertTriangle } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -15,6 +16,16 @@ export default function Transmitter({ onAddToLibrary, onAddToTeam, isInTeam }: T
   const [error, setError] = useState<string | null>(null);
   const [scannedPokemon, setScannedPokemon] = useState<Pokemon | null>(null);
 
+  const catalogIndex = useMemo(() => {
+    const normalize = (value: string) => value.trim().toLowerCase().replace(/[\s_-]+/g, "");
+
+    return CURATED_POKEMON.map((pokemon) => ({
+      pokemon,
+      normalizedName: normalize(pokemon.name),
+      normalizedId: String(pokemon.id),
+    }));
+  }, []);
+
   const SUGGESTIONS = [
     { id: 151, name: "Mew" },
     { id: 382, name: "Kyogre" },
@@ -24,6 +35,22 @@ export default function Transmitter({ onAddToLibrary, onAddToTeam, isInTeam }: T
     { id: 1000, name: "Gimmighoul" }
   ];
 
+  const findLocalPokemon = (searchQuery: string): Pokemon | null => {
+    const normalizedQuery = searchQuery.trim().toLowerCase().replace(/[\s_-]+/g, "");
+    if (!normalizedQuery) return null;
+
+    const exactIdMatch = catalogIndex.find((entry) => entry.normalizedId === normalizedQuery);
+    if (exactIdMatch) return exactIdMatch.pokemon;
+
+    const exactNameMatch = catalogIndex.find((entry) => entry.normalizedName === normalizedQuery);
+    if (exactNameMatch) return exactNameMatch.pokemon;
+
+    const partialNameMatch = catalogIndex.find((entry) => entry.normalizedName.includes(normalizedQuery));
+    if (partialNameMatch) return partialNameMatch.pokemon;
+
+    return null;
+  };
+
   const handleSearch = async (searchQuery: string) => {
     if (!searchQuery.trim()) return;
     setLoading(true);
@@ -32,10 +59,16 @@ export default function Transmitter({ onAddToLibrary, onAddToTeam, isInTeam }: T
 
     try {
       const formattedQuery = searchQuery.trim().toLowerCase();
+      const localPokemon = findLocalPokemon(formattedQuery);
+      if (localPokemon) {
+        setScannedPokemon(localPokemon);
+        return;
+      }
+
       // Fetch Pokemon data
       const pokemonRes = await fetch(`https://pokeapi.co/api/v2/pokemon/${formattedQuery}`);
       if (!pokemonRes.ok) {
-        throw new Error("Target coordinates not found in PokeAPI mainframe.");
+        throw new Error("Target coordinates not found in local catalog or PokeAPI mainframe.");
       }
 
       const pokemonData = await pokemonRes.json();
@@ -111,7 +144,7 @@ export default function Transmitter({ onAddToLibrary, onAddToTeam, isInTeam }: T
           Cosmos Scanning Terminal
         </h2>
         <p className="text-sm text-gray-400">
-          Tune the Aetheric Transmitter to any PokeAPI identifier or coordinate name (e.g. "Arceus" or "25") to materialize and synthesize raw celestial attributes.
+          Tune the Aetheric Transmitter to any local catalog or PokeAPI identifier or coordinate name (e.g. "Arceus" or "25") to materialize and synthesize raw celestial attributes.
         </p>
       </div>
 
@@ -322,7 +355,7 @@ export default function Transmitter({ onAddToLibrary, onAddToTeam, isInTeam }: T
                 Transmitter Offline
               </h4>
               <p className="text-xs text-gray-400">
-                Input coordinate names or identifiers above, then ignite the search array to lock space-time channels and materialize Pokemon nodes directly from the PokeAPI.
+                Input coordinate names or identifiers above, then ignite the search array to lock space-time channels and materialize Pokemon nodes from your local catalog or the PokeAPI.
               </p>
             </motion.div>
           )}
@@ -340,7 +373,7 @@ export default function Transmitter({ onAddToLibrary, onAddToTeam, isInTeam }: T
                 Coordinate Loss // Core Error
               </h4>
               <p className="text-xs text-gray-400">
-                The coordinates inputted do not resolve to any known cosmic entities in the regional PokeAPI matrix. Please calibrate spellings (e.g., 'mew', 'rayquaza') or ID bounds (e.g. 1 to 1025).
+                The coordinates inputted do not resolve to any known cosmic entities in your local catalog or the regional PokeAPI matrix. Please calibrate spellings (e.g., 'mew', 'rayquaza') or ID bounds (e.g. 1 to 1025).
               </p>
             </motion.div>
           )}
