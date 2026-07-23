@@ -1,0 +1,64 @@
+{
+  "id": 7979,
+  "name": "Ember Spark (Stage 1)",
+  "types": [
+    "fire"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 45,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 60,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 40,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 70,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 50,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 65,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/ember-Stage-1.png",
+  "height": 6,
+  "weight": 85,
+  "description": "The initial evolutionary form of the solar flare line. It harnesses primordial thermal energy within its volatile core, emitting gentle warmth when calm and fierce embers when threatened.",
+  "divineTier": "Flame Initiate",
+  "ability": "Blaze / Solar Heart",
+  "nature": "Spirited",
+  "originLore": "Sparked from the first solar flares during the ignition of the Aetherium core, Ember Spark carries the untamed flame of primordial star formation.",
+  "lore": {
+    "originEpoch": "Solar Ignition Epoch",
+    "celestialConcordance": "Ember Spark stabilizes ambient thermal currents, preventing cold voids from encroaching upon nascent star nurseries.",
+    "aethericFrequency": "412.3 YJ",
+    "resonanceRating": "MID",
+    "divineTier": "Flame Initiate",
+    "quantumResonators": [
+      {
+        "name": "Spark Ignition",
+        "description": "Discharges a flurry of radiant embers that ignite ambient thermal particles."
+      },
+      {
+        "name": "Solar Spark",
+        "description": "Focuses heat into a miniature solar flare that illuminates dark anomalies."
+      }
+    ]
+  }
+}

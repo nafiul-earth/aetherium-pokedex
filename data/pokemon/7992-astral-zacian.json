@@ -1,0 +1,66 @@
+{
+  "id": 7992,
+  "name": "Astral-Zacian (Crown Blade)",
+  "types": [
+    "fairy",
+    "steel",
+    "astral"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 92,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 170,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 115,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 80,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 115,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 148,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Astral-Zacian.png",
+  "height": 28,
+  "weight": 3550,
+  "description": "The crowned sword hero empowered by astral light. Its blade can cleave through space-time anomalies and slice solid void barriers effortlessly.",
+  "divineTier": "Celestial Vanguard",
+  "ability": "Intrepid Sword / Prism Blade",
+  "nature": "Jolly",
+  "originLore": "Wielding a sword forged from a dying white dwarf star, Astral-Zacian stands as the supreme protector of the Aetherium's royal sanctuaries.",
+  "lore": {
+    "originEpoch": "Crown Sanctuary Epoch",
+    "celestialConcordance": "Astral-Zacian cuts down entropic rift monsters, sealing dimensional wounds before they destroy galactic cores.",
+    "aethericFrequency": "958.9 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Celestial Vanguard",
+    "quantumResonators": [
+      {
+        "name": "Behemoth Blade (Astral)",
+        "description": "Slashes with a colossal starlight blade that deals double damage to oversized void titans."
+      },
+      {
+        "name": "Starlight Flurry",
+        "description": "Executes a swift sequence of sword thrusts that pierce all physical defenses."
+      }
+    ]
+  }
+}

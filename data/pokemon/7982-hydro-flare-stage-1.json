@@ -1,0 +1,65 @@
+{
+  "id": 7982,
+  "name": "Hydro Flare (Stage 1)",
+  "types": [
+    "water",
+    "fire"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 55,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 65,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 55,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 75,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 60,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 60,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Hydro-Flare-Stage-1.png",
+  "height": 7,
+  "weight": 120,
+  "description": "A rare dual-element entity born at hydrothermal vents in cosmic oceans. Its body maintains a steam equilibrium between scalding flames and liquid vapor.",
+  "divineTier": "Steam Spark",
+  "ability": "Steam Surge / Vaporize",
+  "nature": "Modest",
+  "originLore": "Originating from sub-oceanic vents on frozen ocean worlds, Hydro Flare embodies the paradoxical harmony of scalding heat and liquid flow.",
+  "lore": {
+    "originEpoch": "Hydrothermal Genesis Epoch",
+    "celestialConcordance": "Hydro Flare creates protective thermal mist clouds around cosmic hatcheries, shielding fragile organisms from void radiation.",
+    "aethericFrequency": "430.5 YJ",
+    "resonanceRating": "MID",
+    "divineTier": "Steam Spark",
+    "quantumResonators": [
+      {
+        "name": "Scalding Vapor",
+        "description": "Projects a high-pressure jet of superheated steam that scalds foes."
+      },
+      {
+        "name": "Fluid Shield",
+        "description": "Envelops itself in a boiling water barrier that repels kinetic impacts."
+      }
+    ]
+  }
+}

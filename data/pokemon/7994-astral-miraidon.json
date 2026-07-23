@@ -1,0 +1,66 @@
+{
+  "id": 7994,
+  "name": "Astral-Miraidon (Cyber Paradox)",
+  "types": [
+    "electric",
+    "dragon",
+    "astral"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 85,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 155,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 115,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 135,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Astral Miraidon.png",
+  "height": 35,
+  "weight": 2400,
+  "description": "A futuristic cyber-dragon entity from an advanced astral timeline. It hovers on high-frequency anti-gravity engines and controls cosmic plasma fields.",
+  "divineTier": "Paradox Sovereign",
+  "ability": "Hadron Engine / Cyber Drive",
+  "nature": "Modest",
+  "originLore": "Transported from a future epoch where technology and cosmic light converged into sentient digital dragons.",
+  "lore": {
+    "originEpoch": "Future Astral Epoch",
+    "celestialConcordance": "Astral-Miraidon overcharges local energy grids with clean hadron plasma, enabling instant interstellar warp travel.",
+    "aethericFrequency": "964.3 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Paradox Sovereign",
+    "quantumResonators": [
+      {
+        "name": "Electro Drift (Astral)",
+        "description": "Spins through the field on plasma rings, delivering a devastating electric strike."
+      },
+      {
+        "name": "Hadron Overdrive",
+        "description": "Charges the electric terrain to boost Special Attack power for all active allies."
+      }
+    ]
+  }
+}

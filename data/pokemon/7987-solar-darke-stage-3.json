@@ -1,0 +1,66 @@
+{
+  "id": 7987,
+  "name": "Solar Darke (Stage 3)",
+  "types": [
+    "dark",
+    "fire",
+    "solar"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 105,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 140,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 95,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 130,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 95,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 110,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Solar-darke-Stage-3.png",
+  "height": 26,
+  "weight": 1850,
+  "description": "The ultimate dark solar predator. It absorbs light from surrounding celestial bodies to fuel dark solar blasts that bypass dimensional shields.",
+  "divineTier": "Eclipse Sovereign",
+  "ability": "Dark Eclipse / Mold Breaker",
+  "nature": "Naughty",
+  "originLore": "Forged during a total multiversal eclipse when solar power and void shadows collided. Solar Darke feeds on both light and darkness.",
+  "lore": {
+    "originEpoch": "Total Eclipse Epoch",
+    "celestialConcordance": "Solar Darke absorbs excess light during stellar overcharges, shielding surrounding systems from blinding solar destruction.",
+    "aethericFrequency": "890.3 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Eclipse Sovereign",
+    "quantumResonators": [
+      {
+        "name": "Eclipse Beam",
+        "description": "Fires a dual beam of blinding light and pitch dark energy that destabilizes defense shields."
+      },
+      {
+        "name": "Shadow Corona",
+        "description": "Surrounds itself in a shadowy solar flare that absorbs incoming energy attacks."
+      }
+    ]
+  }
+}

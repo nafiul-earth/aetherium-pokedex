@@ -1,0 +1,66 @@
+{
+  "id": 7983,
+  "name": "Hydro Flare (Stage 2)",
+  "types": [
+    "water",
+    "fire",
+    "steam"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 85,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 95,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 80,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 115,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 90,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 85,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Hydro-Flare-Stage-2.png",
+  "height": 16,
+  "weight": 780,
+  "description": "The evolved steam titan. It manipulates thermal convection currents to summon boiling tsunamis and vaporize thermal energy in seconds.",
+  "divineTier": "Hydrothermal Leviathan",
+  "ability": "Thermal Vapor / Water Absorb",
+  "nature": "Quiet",
+  "originLore": "Maturing in the superheated currents of interstellar nebulae, stage 2 Hydro Flare controls phase transitions between liquid, steam, and plasma.",
+  "lore": {
+    "originEpoch": "Convection Surge Epoch",
+    "celestialConcordance": "Hydro Flare Stage 2 regulates planetary ocean temperatures, preventing thermal runaway across watery worlds.",
+    "aethericFrequency": "688.2 YJ",
+    "resonanceRating": "MID",
+    "divineTier": "Hydrothermal Leviathan",
+    "quantumResonators": [
+      {
+        "name": "Boiling Tsunami",
+        "description": "Summons a crashing wave of boiling plasma-infused water."
+      },
+      {
+        "name": "Vapor Compression",
+        "description": "Compresses steam into dense explosive spheres that detonate on contact."
+      }
+    ]
+  }
+}

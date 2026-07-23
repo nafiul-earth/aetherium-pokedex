@@ -1,0 +1,66 @@
+{
+  "id": 7986,
+  "name": "Bug Flare (Stage 3)",
+  "types": [
+    "bug",
+    "fire",
+    "solar"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 95,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 125,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 95,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 135,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 90,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 120,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Bug-flare-Stage-3.png",
+  "height": 22,
+  "weight": 1150,
+  "description": "The fully realized solar insectoid titan. Flying across star clusters, it leaves trails of stardust and blazing solar winds in its wake.",
+  "divineTier": "Solar Monarch",
+  "ability": "Solar Wings / Tinted Lens",
+  "nature": "Adamant",
+  "originLore": "Reaching full maturity in the core of stellar superclusters, Bug Flare Stage 3 commands legions of solar flares with every flap of its majestic wings.",
+  "lore": {
+    "originEpoch": "Stellar Hive Apex Epoch",
+    "celestialConcordance": "Bug Flare Stage 3 leads the cosmic swarm to ignite dead worlds, jumpstarting ecological cycles with solar energy.",
+    "aethericFrequency": "842.1 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Solar Monarch",
+    "quantumResonators": [
+      {
+        "name": "Solar Tempest",
+        "description": "Unleashes a hurricane of flaming solar dust that vaporizes enemy projectiles."
+      },
+      {
+        "name": "Chitin Supernova",
+        "description": "Detonates excess thermal armor, causing a localized supernova blast."
+      }
+    ]
+  }
+}

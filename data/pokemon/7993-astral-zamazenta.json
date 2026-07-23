@@ -1,0 +1,66 @@
+{
+  "id": 7993,
+  "name": "Astral-Zamazenta (Crown Aegis)",
+  "types": [
+    "fighting",
+    "steel",
+    "astral"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 92,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 130,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 155,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 80,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 155,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 128,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Astral-Zamazenta.png",
+  "height": 29,
+  "weight": 7850,
+  "description": "The crowned shield guardian clad in unbreakable star-forged metal. Its shield repels even the concentrated blast of a collapsing star.",
+  "divineTier": "Aegis Guardian",
+  "ability": "Dauntless Shield / Prism Barrier",
+  "nature": "Impish",
+  "originLore": "Standing as an impenetrable wall between reality and chaos, Astral-Zamazenta's shield was tempered in the core of neutron stars.",
+  "lore": {
+    "originEpoch": "Bastion Aegis Epoch",
+    "celestialConcordance": "Astral-Zamazenta absorbs destructive impact forces and converts them into protective light fields for allied entities.",
+    "aethericFrequency": "952.1 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Aegis Guardian",
+    "quantumResonators": [
+      {
+        "name": "Behemoth Bash (Astral)",
+        "description": "Charges forward with its star-shield, smashing through enemy defenses."
+      },
+      {
+        "name": "Impenetrable Starlight",
+        "description": "Creates an absolute force field that immunizes all allies to status conditions and incoming attacks."
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": 7989,
+  "name": "Cyber-Rayquaza (Neon Apex)",
+  "types": [
+    "dragon",
+    "steel",
+    "cyber"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 105,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 160,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 110,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 160,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 125,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Cyber-Rayquaza.png",
+  "height": 75,
+  "weight": 2400,
+  "description": "A cybernetically enhanced form of Rayquaza built with futuristic nanite alloys. It patrols the digital and physical stratosphere of the Aetherium.",
+  "divineTier": "Cybernetic Archon",
+  "ability": "Air Lock / Cyber Core",
+  "nature": "Hasty",
+  "originLore": "Created by blending Rayquaza's sky-sovereign DNA with high-frequency quantum nanites. It can convert atmospheric ozone into pure energy.",
+  "lore": {
+    "originEpoch": "Cybernetic Ascent Epoch",
+    "celestialConcordance": "Cyber-Rayquaza monitors the digital grid and ozone boundary, intercepting rogue meteors and corrupted data streams.",
+    "aethericFrequency": "968.2 YJ",
+    "resonanceRating": "MAX",
+    "divineTier": "Cybernetic Archon",
+    "quantumResonators": [
+      {
+        "name": "Cyber Ascent",
+        "description": "Rockets into the digital stratosphere at sub-light speed, unleashing a salvo of plasma homing missiles."
+      },
+      {
+        "name": "Nanite Atmosphere",
+        "description": "Deploys a barrier of microscopic nanites that neutralize weather phenomena and status effects."
+      }
+    ]
+  }
+}

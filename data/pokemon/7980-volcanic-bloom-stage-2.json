@@ -1,0 +1,65 @@
+{
+  "id": 7980,
+  "name": "Volcanic Bloom (Stage 2)",
+  "types": [
+    "fire",
+    "grass"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 75,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 85,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 70,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 105,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 85,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 80,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Volcanic-bloom-Stage-2.png",
+  "height": 14,
+  "weight": 450,
+  "description": "The mid-stage fusion of volcanic magma and solar flora. It synthesizes geothermal magma with photosynthetic light to blossom with intense incinerating energy.",
+  "divineTier": "Floral Incinerator",
+  "ability": "Chlorophyll / Magmalize",
+  "nature": "Rash",
+  "originLore": "Born at the boundary where magma rivers meet cosmic nebulae, Volcanic Bloom fuses the destructive force of molten rock with the regenerative grace of solar flora.",
+  "lore": {
+    "originEpoch": "Geothermal Synthesis Epoch",
+    "celestialConcordance": "Volcanic Bloom channels geothermal pressure into verdant cosmic flora, converting molten slag into fertile star matter.",
+    "aethericFrequency": "545.8 YJ",
+    "resonanceRating": "MID",
+    "divineTier": "Floral Incinerator",
+    "quantumResonators": [
+      {
+        "name": "Magma Eruption",
+        "description": "Launches molten seed pods that burst into self-sustaining geothermal fires."
+      },
+      {
+        "name": "Solar Photosynthesis",
+        "description": "Absorbs cosmic radiation to instantaneously heal structural fissures."
+      }
+    ]
+  }
+}

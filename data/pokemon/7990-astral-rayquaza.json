@@ -1,0 +1,66 @@
+{
+  "id": 7990,
+  "name": "Astral-Rayquaza (Sky Apex)",
+  "types": [
+    "dragon",
+    "flying",
+    "astral"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 110,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 165,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 105,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 165,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 105,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 130,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Astral-Rayquaza.png",
+  "height": 72,
+  "weight": 2250,
+  "description": "A divine synthesis of Rayquaza and Necrozma. Wearing translucent starlight armor, it commands the celestial winds of the upper atmosphere.",
+  "divineTier": "Astral Sovereign",
+  "ability": "Delta Stream / Prism Armor (Astral)",
+  "nature": "Naive",
+  "originLore": "Forged when Necrozma's light prism fused with the Sky High Pokémon during a cosmic meteor storm. It weaves constellations into defensive barriers.",
+  "lore": {
+    "originEpoch": "Stellar Canopy Epoch",
+    "celestialConcordance": "Astral-Rayquaza shields the multiversal skies from void invaders, refracting cosmic rays into shimmering aurora shields.",
+    "aethericFrequency": "975.4 YJ",
+    "resonanceRating": "MAX",
+    "divineTier": "Astral Sovereign",
+    "quantumResonators": [
+      {
+        "name": "Dragon Ascent (Astral)",
+        "description": "Dives through the astral plane, striking with the full kinetic energy of a falling star."
+      },
+      {
+        "name": "Prism Aurora",
+        "description": "Envelops the field in a prismatic aurora that minimizes weak-type damage."
+      }
+    ]
+  }
+}

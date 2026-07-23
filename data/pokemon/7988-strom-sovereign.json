@@ -1,0 +1,66 @@
+{
+  "id": 7988,
+  "name": "Storm Sovereign",
+  "types": [
+    "electric",
+    "dragon",
+    "tempest"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 115,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 135,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 110,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 145,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 110,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 125,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Strom-Sovereign.png",
+  "height": 42,
+  "weight": 3800,
+  "description": "The supreme ruler of cosmic electromagnetic storms. Its roar triggers megavolt lightning strikes across galactic nebulae.",
+  "divineTier": "Tempest Sovereign",
+  "ability": "Galvanic Storm / Drizzle",
+  "nature": "Timid",
+  "originLore": "Born in the eye of an eternal intergalactic hyperstorm, Storm Sovereign governs the distribution of electrical charge across space.",
+  "lore": {
+    "originEpoch": "Electromagnetic Primordial Epoch",
+    "celestialConcordance": "Storm Sovereign channels hypervolt lightning currents to recharge the magnetic fields of fading planets.",
+    "aethericFrequency": "935.6 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Tempest Sovereign",
+    "quantumResonators": [
+      {
+        "name": "Thunderbolt Apex",
+        "description": "Discharges a megavolt lightning bolt that ionizes space and paralyzes all targets."
+      },
+      {
+        "name": "Tempest Vortex",
+        "description": "Creates a raging hurricane of electromagnetic plasma that deflects attacks."
+      }
+    ]
+  }
+}

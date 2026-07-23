@@ -1,0 +1,66 @@
+{
+  "id": 7991,
+  "name": "Astral-Lugia (Tidal Sovereign)",
+  "types": [
+    "psychic",
+    "water",
+    "astral"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 116,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 90,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 140,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 140,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 164,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 110,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Astral-Lugia.png",
+  "height": 55,
+  "weight": 2300,
+  "description": "The astral guardian of the deep ocean and cosmic current. A single stroke of its glowing wings can calm or summon 40-day tempest storms.",
+  "divineTier": "Oceanic Sovereign",
+  "ability": "Multiscale / Pressure (Astral)",
+  "nature": "Calm",
+  "originLore": "Formed in the deepest oceanic trenches illuminated by fallen stellar shards. Astral-Lugia preserves equilibrium across terrestrial and cosmic waters.",
+  "lore": {
+    "originEpoch": "Abyssal Tide Epoch",
+    "celestialConcordance": "Astral-Lugia sings harmonic sea hymns that pacify chaotic gravitational waves between planet systems.",
+    "aethericFrequency": "942.8 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Oceanic Sovereign",
+    "quantumResonators": [
+      {
+        "name": "Aeroblast (Astral)",
+        "description": "Fires a vortex of pressurized cosmic water and psychic light."
+      },
+      {
+        "name": "Subsurface Harmony",
+        "description": "Emits a pulse that completely restores defective energy structures and shields."
+      }
+    ]
+  }
+}

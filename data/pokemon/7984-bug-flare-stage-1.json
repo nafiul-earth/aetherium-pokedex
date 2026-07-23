@@ -1,0 +1,65 @@
+{
+  "id": 7984,
+  "name": "Bug Flare (Stage 1)",
+  "types": [
+    "bug",
+    "fire"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 40,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 55,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 50,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 65,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 45,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 70,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Bug-flare-Stage-1.png",
+  "height": 4,
+  "weight": 32,
+  "description": "A luminescent insectoid entity that feeds on solar radiation. Its bio-luminescent thorax pulses with burning thermal energy.",
+  "divineTier": "Chitin Spark",
+  "ability": "Swarm / Flame Body",
+  "nature": "Hasty",
+  "originLore": "Born within solar nebulae, Bug Flare Stage 1 swarms near star surfaces, harvesting light energy into solid chitin armor.",
+  "lore": {
+    "originEpoch": "Nebular Swarm Epoch",
+    "celestialConcordance": "Bug Flare Stage 1 acts as cosmic pollinators, transferring solar particles between stellar flower clouds.",
+    "aethericFrequency": "380.9 YJ",
+    "resonanceRating": "MID",
+    "divineTier": "Chitin Spark",
+    "quantumResonators": [
+      {
+        "name": "Bioluminescent Flash",
+        "description": "Emits a blinding burst of heat and light that disorients aggressors."
+      },
+      {
+        "name": "Flame Chitin",
+        "description": "Hardens its outer shell into molten armor, reflecting physical impacts."
+      }
+    ]
+  }
+}

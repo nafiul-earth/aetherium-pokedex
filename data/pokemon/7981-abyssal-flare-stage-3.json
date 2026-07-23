@@ -1,0 +1,66 @@
+{
+  "id": 7981,
+  "name": "Abyssal Flare (Stage 3)",
+  "types": [
+    "fire",
+    "dark",
+    "void"
+  ],
+  "stats": [
+    {
+      "name": "HP",
+      "value": 110,
+      "max": 255
+    },
+    {
+      "name": "Attack",
+      "value": 135,
+      "max": 255
+    },
+    {
+      "name": "Defense",
+      "value": 105,
+      "max": 255
+    },
+    {
+      "name": "Sp. Atk",
+      "value": 145,
+      "max": 255
+    },
+    {
+      "name": "Sp. Def",
+      "value": 100,
+      "max": 255
+    },
+    {
+      "name": "Speed",
+      "value": 115,
+      "max": 255
+    }
+  ],
+  "sprite": "assets/pokemon/Abyssal-Flare-Stage-3.png",
+  "height": 28,
+  "weight": 2100,
+  "description": "The fully evolved apex of the dark flame sequence. It commands black solar flames that consume dark matter, releasing blinding catastrophic light.",
+  "divineTier": "Abyssal Sovereign",
+  "ability": "Infernal Void / Dark Flame",
+  "nature": "Naughty",
+  "originLore": "Forged in the heart of a collapsing supergiant star swallowed by a black hole. Abyssal Flare wields flames so hot they appear pitch black, vaporizing spatial barriers.",
+  "lore": {
+    "originEpoch": "Singularity Flare Epoch",
+    "celestialConcordance": "Abyssal Flare burns away corrupted dark matter in the abyssal layers, consuming entropic debris to fuel multiversal expansion.",
+    "aethericFrequency": "876.1 YJ",
+    "resonanceRating": "HIGH",
+    "divineTier": "Abyssal Sovereign",
+    "quantumResonators": [
+      {
+        "name": "Black Hole Nova",
+        "description": "Unleashes a dark matter explosion that incinerates physical and immaterial structures."
+      },
+      {
+        "name": "Void Inferno",
+        "description": "Surges with dark flames that drain thermal energy from enemy attacks."
+      }
+    ]
+  }
+}

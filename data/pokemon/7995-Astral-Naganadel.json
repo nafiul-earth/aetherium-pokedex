@@ -38,7 +38,7 @@
       "max": 255
     }
   ],
-  "sprite": "{{DATA:IMAGE:IMAGE_114}}",
+  "sprite": "assets/pokemon/Astral-Naganadel.png",
   "height": 36,
   "weight": 150.0,
   "description": "A high-tier synthesis of Naganadel and Necrozma. It exists as the primary needle of the void, capable of piercing the dimensional veil to harvest Ultra Energy from the multiverse core.",
